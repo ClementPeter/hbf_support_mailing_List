@@ -201,7 +201,8 @@ class _SupportPageState extends State<SupportPage> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(height: 30.0),                               
+                                    const SizedBox(height: 30.0),
+                                    //
 
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
@@ -224,7 +225,8 @@ class _SupportPageState extends State<SupportPage> {
                                                   "Your Response has been recorded...We'll get back in a bit",
                                                 ),
                                                 duration: Duration(
-                                                    milliseconds: 2000),
+                                                  milliseconds: 2000,
+                                                ),
                                               ),
                                             );
                                           }
@@ -250,10 +252,10 @@ class _SupportPageState extends State<SupportPage> {
                                       },
                                       child: const Padding(
                                         padding: EdgeInsets.only(
-                                          top: 12,
-                                          bottom: 12,
-                                          right: 24,
-                                          left: 24,
+                                          top: 8,
+                                          bottom: 8,
+                                          right: 25,
+                                          left: 25,
                                         ),
                                         child: Text(
                                           'Submit',
