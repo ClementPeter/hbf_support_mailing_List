@@ -150,7 +150,7 @@ class _SupportPageState extends State<SupportPage> {
                                           [
                                             RequiredValidator(
                                               errorText:
-                                                  "Please enter yout mail",
+                                                  "Please enter your mail",
                                             ),
                                             EmailValidator(
                                               errorText:
@@ -201,96 +201,60 @@ class _SupportPageState extends State<SupportPage> {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(height: 30.0),
-                                    // //Register Button
-                                    // GestureDetector(
-                                    // onTap: () {
-                                    //   //emailController.
-                                    //   //print('add email to emails list');
-                                    //   //email = emailController.text;
-                                    //   emails!.add(email!);
-                                    //   names!.add(name!);
-                                    //   print(emails);
-                                    //   print(names);
-                                    // },
-                                    // onTap: () {
-                                    //   emails!.add(emailController.text);
-                                    //   print(emails);
-                                    //   emailController.clear();
-                                    //   print('emails list after clearing');
-                                    //   print(emails);
-                                    //   //if(){},
-                                    // ScaffoldMessenger.of(context).showSnackBar(
-                                    //   const SnackBar(
-                                    //     content: Text("Form Filled"),
-                                    //     duration: Duration(milliseconds: 2000),
-                                    //   ),
-                                    // );
-                                    // },
-                                    //   onTap: submit(),
-                                    //   child: Container(
-                                    //     width: 140.0,
-                                    //     height: 40.0,
-                                    //     decoration: BoxDecoration(
-                                    //       color: const Color(0XFF205DA2),
-                                    //       borderRadius: BorderRadius.circular(30.0),
-                                    //       // color: Colors.grey.shade200.withOpacity(0.5),
-                                    //     ),
-                                    //     child: const Center(
-                                    //       child: Text(
-                                    //         "Submit",
-                                    //         textAlign: TextAlign.center,
-                                    //         style: TextStyle(
-                                    //           fontFamily: 'Poppins',
-                                    //           fontWeight: FontWeight.bold,
-                                    //           fontSize: 16.0,
-                                    //           color: Colors.white,
-                                    //         ),
-                                    //       ),
-                                    //     ),
-                                    //   ),
-                                    // ),
+                                    const SizedBox(height: 30.0),                               
 
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
                                         primary: const Color(
-                                            0XFF205DA2), // background
-                                        //onPrimary: Colors.white, // foreground
+                                          0XFF205DA2,
+                                        ), // background
+
                                         shape: const StadiumBorder(),
                                       ),
                                       onPressed: () {
-                                        // setState(() {
-
-                                        //   //emailController.
-                                        //   // ScaffoldMessenger.of(context)
-                                        //   //     .showSnackBar(
-                                        //   //   const SnackBar(
-                                        //   //     content: Text(
-                                        //   //       "Your Response has been recorded",
-                                        //   //     ),
-                                        //   //     duration:
-                                        //   //         Duration(milliseconds: 2000),
-                                        //   //   ),
-                                        //   //   );
-                                        // });
-                                        emails!.add(email!);
-                                        emailController.clear();
-                                        if (formKey.currentState!.validate()) {
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(
-                                            const SnackBar(
-                                              content: Text(
-                                                "Your Response has been recorded...We'll get back in a bit",
+                                        setState(() {
+                                          if (formKey.currentState!
+                                              .validate()) {
+                                            emails!.add(email!);
+                                            names!.add(name!);
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                content: Text(
+                                                  "Your Response has been recorded...We'll get back in a bit",
+                                                ),
+                                                duration: Duration(
+                                                    milliseconds: 2000),
                                               ),
-                                              duration:
-                                                  Duration(milliseconds: 2000),
-                                            ),
-                                          );
-                                        }
-                                        print(emails);
+                                            );
+                                          }
+                                          emailController.clear();
+                                          nameController.clear();
+
+                                          //emailController.
+                                          // ScaffoldMessenger.of(context)
+                                          //     .showSnackBar(
+                                          //   const SnackBar(
+                                          //     content: Text(
+                                          //       "Your Response has been recorded",
+                                          //     ),
+                                          //     duration:
+                                          //         Duration(milliseconds: 2000),
+                                          //   ),
+                                          //   );
+                                        });
+
+                                        print("email: $emails");
+                                        print("name: $names");
+                                        // print(names);
                                       },
                                       child: const Padding(
-                                        padding: EdgeInsets.all(12.0),
+                                        padding: EdgeInsets.only(
+                                          top: 12,
+                                          bottom: 12,
+                                          right: 24,
+                                          left: 24,
+                                        ),
                                         child: Text(
                                           'Submit',
                                           style: TextStyle(
@@ -301,20 +265,8 @@ class _SupportPageState extends State<SupportPage> {
                                           ),
                                         ),
                                       ),
-                                      // style: ElevatedButton.styleFrom(
-                                      //   shape: const StadiumBorder(),
-                                      // ),
                                     ),
-                                    // TextButton(
-                                    //   onPressed: () {
-                                    //     print(
-                                    //         "questionController: ${emailController.text} ...... from text button");
-                                    //     setState(() {
-                                    //       email = emailController.text;
-                                    //     });
-                                    //   },
-                                    //   child: Text("SETSTATE BUTTON"),
-                                    // ),
+
                                     const SizedBox(height: 30.0),
                                   ],
                                 ),
