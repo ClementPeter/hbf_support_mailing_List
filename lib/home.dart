@@ -207,18 +207,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //               ),
 //             ),
 
-//             // Center(
-//             //   child: BackdropFilter(
-//             //     filter: ImageFilter.blur(
-//             //       sigmaX: 10.0,
-//             //       sigmaY: 10.0,
-//             //     ),
-//             //     child: Container(
-//             //       alignment: Alignment.center,
-//             //       child: const Text('Hi Frost'),
-//             //     ),
-//             //   ),
-//             // ),
 
 //             //frosted glass effect
 //             Padding(
@@ -323,13 +311,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //                                     ),
 //                                   ),
 
-//                                   // child: const Padding(
-//                                   //   padding: EdgeInsets.all(15.0),
-//                                   //   child: Text(
-//                                   //     "join",
-//                                   //     style: TextStyle(fontSize: 20),
-//                                   //   ),
-//                                   // ),
 //                                 ),
 //                               ),
 //                               const SizedBox(height: 30.0),
