@@ -10,48 +10,58 @@ class SupportPage extends StatefulWidget {
 }
 
 class _SupportPageState extends State<SupportPage> {
+  // Clean up the controller when the widget is disposed.
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     emailController.dispose();
     nameController.dispose();
     super.dispose();
   }
 
-  //form key
+  //Form key
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   //final _formKey = GlobalKey<FormState>();
 
   //email controller
   TextEditingController emailController = TextEditingController();
+
   //name controller
   TextEditingController nameController = TextEditingController();
-  //
+
   //Stores user email
   String? email;
-  //
-  //Stores user nameS
+
+  //Stores usernames
   String? name;
+
   //Store email into an empty List
   List<String>? emails = [];
-  //
+
   //Store names into an empty List
   List<String>? names = [];
 
-  //
+  //Submit Function
   submit() {
     emails!.add(emailController.text);
     print(emails);
-    emailController.clear();
+    //emailController.clear();
     print('emails list after clearing');
     print(emails);
-    //if(){},
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text("Form Filled"),
-        duration: Duration(milliseconds: 2000),
-      ),
-    );
+
+    if (formKey.currentState!.validate()) {
+      emails!.add(email!);
+      names!.add(name!);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            "Your Response has been recorded...We'll get back in a bit",
+          ),
+          duration: Duration(
+            milliseconds: 2000,
+          ),
+        ),
+      );
+    }
   }
 
   @override
@@ -70,11 +80,11 @@ class _SupportPageState extends State<SupportPage> {
         ),
         child: SingleChildScrollView(
           child: Column(
-            //crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 20.0),
+                    horizontal: 50.0, vertical: 20.0),
                 child: Image.asset(
                   'images/hbf_logo.png',
                   width: 60.0,
@@ -202,50 +212,16 @@ class _SupportPageState extends State<SupportPage> {
                                       ),
                                     ),
                                     const SizedBox(height: 30.0),
-                                    //
-
+                                    //Submit Button
                                     ElevatedButton(
                                       style: ElevatedButton.styleFrom(
-                                        primary: const Color(
-                                          0XFF205DA2,
-                                        ), // background
-
+                                        primary: const Color(0XFF205DA2),
                                         shape: const StadiumBorder(),
+                                        elevation: 10.0,
                                       ),
                                       onPressed: () {
-                                        setState(() {
-                                          if (formKey.currentState!
-                                              .validate()) {
-                                            emails!.add(email!);
-                                            names!.add(name!);
-                                            ScaffoldMessenger.of(context)
-                                                .showSnackBar(
-                                              const SnackBar(
-                                                content: Text(
-                                                  "Your Response has been recorded...We'll get back in a bit",
-                                                ),
-                                                duration: Duration(
-                                                  milliseconds: 2000,
-                                                ),
-                                              ),
-                                            );
-                                          }
-                                          emailController.clear();
-                                          nameController.clear();
-
-                                          //emailController.
-                                          // ScaffoldMessenger.of(context)
-                                          //     .showSnackBar(
-                                          //   const SnackBar(
-                                          //     content: Text(
-                                          //       "Your Response has been recorded",
-                                          //     ),
-                                          //     duration:
-                                          //         Duration(milliseconds: 2000),
-                                          //   ),
-                                          //   );
-                                        });
-
+                                        submit();
+                                       
                                         print("email: $emails");
                                         print("name: $names");
                                         // print(names);
@@ -264,11 +240,11 @@ class _SupportPageState extends State<SupportPage> {
                                             fontWeight: FontWeight.bold,
                                             fontSize: 16.0,
                                             color: Colors.white,
+                                            letterSpacing: 2.0,
                                           ),
                                         ),
                                       ),
                                     ),
-
                                     const SizedBox(height: 30.0),
                                   ],
                                 ),

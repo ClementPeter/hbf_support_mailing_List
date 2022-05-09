@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hbf_trenches_support/support_page.dart';
-
 import 'dart:ui';
 
 class MyHomePage extends StatefulWidget {
@@ -30,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 20.0),
+                    horizontal: 50.0, vertical: 20.0),
                 child: Image.asset(
                   'images/hbf_logo.png',
                   width: 60.0,
@@ -108,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         builder: (context) =>
                                             const SupportPage(),
                                       ),
-                                    );                                 
+                                    );
                                   },
                                   child: const Padding(
                                     padding: EdgeInsets.only(
@@ -183,89 +182,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class MyHomePage extends StatefulWidget {
-//   const MyHomePage({Key? key}) : super(key: key);
-//   //const MyHomePage({Key? key, required this.title}) : super(key: key);
-//   // final String title;
-//   @override
-//   State<MyHomePage> createState() => _MyHomePageState();
-// }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
 //       body: Container(
 //         width: MediaQuery.of(context).size.width,
 //         height: MediaQuery.of(context).size.height,
