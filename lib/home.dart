@@ -150,38 +150,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //       body: Container(
 //         width: MediaQuery.of(context).size.width,
 //         height: MediaQuery.of(context).size.height,
@@ -206,58 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //                 height: 100.0,
 //               ),
 //             ),
-
-
-//             //frosted glass effect
-//             Padding(
-//               //padding: const EdgeInsets.all(8.0),
-//               padding: const EdgeInsets.symmetric(horizontal: 50.0),
-//               child: ClipRect(
-//                 child: BackdropFilter(
-//                   filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
-//                   child: Center(
-//                     child: Container(
-//                       width: MediaQuery.of(context).size.width * 1,
-//                       height: MediaQuery.of(context).size.height * 0.7,
-//                       // width: 500.0,
-//                       // height: 150.0,s
-//                       decoration: BoxDecoration(
-//                         borderRadius: BorderRadius.circular(20.0),
-//                         color: Colors.grey.shade200.withOpacity(0.5),
-//                       ),
-//                       child: SingleChildScrollView(
-//                         child: Padding(
-//                           padding:
-//                               const EdgeInsets.only(left: 10.0, right: 10.0),
-//                           child: Column(
-//                             //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//                             children: [
-//                               const SizedBox(height: 50.0), //
-//                               Center(
-//                                 child: Column(
-//                                   children: const [
-//                                     Text(
-//                                       "Having the capacity to support my fellow dawgs has been my life long goal...\nKnowing how it feels being in the trenches without shit...\nThus In collaboration with DURK I am setting up",
-//                                       textAlign: TextAlign.center,
-//                                       //style: TextStyle(fontSize: 30),
-//                                       style: TextStyle(
-//                                         fontFamily: 'Poppins',
-//                                         fontWeight: FontWeight.bold,
-//                                         fontSize: 25.0,
-//                                         color: Color(0XFF205DA2),
-//                                       ),
-//                                     ),
-//                                     SizedBox(height: 20.0),
-//                                     Text(
-//                                       "HOT BOII FAMILY FOUNDATION\n",
-//                                       textAlign: TextAlign.center,
-//                                       style: TextStyle(
-//                                         fontFamily: 'Poppins',
-//                                         fontWeight: FontWeight.bold,
-//                                         fontSize: 30.0,
-//                                         color: Color(0XFFDC3131),
-//                                       ),
-//                                     ),
+         ),
 //                                     Text(
 //                                       "Sign up for this Mailing List to get support\n",
 //                                       textAlign: TextAlign.center,
@@ -270,18 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //                                       ),
 //                                     ),
 //                                   ],
-//                                 ),
-//                               ),
-//                               //const SizedBox(height: 20.0),
-//                               //Join Button
-//                               InkWell(
-//                                 onTap: () {
-//                                   print('Support Page');
-//                                   Navigator.push(
-//                                     context,
-//                                     MaterialPageRoute(
-//                                       builder: (context) => const SupportPage(),
-//                                     ),
+//                  
 //                                   );
 //                                 },
 //                                 child: Container(
