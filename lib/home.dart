@@ -149,46 +149,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
 
-
-//       body: Container(
-//         width: MediaQuery.of(context).size.width,
-//         height: MediaQuery.of(context).size.height,
-//         decoration: const BoxDecoration(
-//           image: DecorationImage(
-//             image: AssetImage(
-//               'images/geng.png',
-//             ),
-//             fit: BoxFit.fill,
-//           ),
-//         ),
-//         child: Column(
-//           crossAxisAlignment: CrossAxisAlignment.start,
-//           children: [
-//             Padding(
-//               //padding: const EdgeInsets.all(40.0),
-//               padding:
-//                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-//               child: Image.asset(
-//                 'images/hbf_logo.png',
-//                 width: 60.0,
-//                 height: 100.0,
-//               ),
-//             ),
-         ),
-//                                     Text(
-//                                       "Sign up for this Mailing List to get support\n",
-//                                       textAlign: TextAlign.center,
-//                                       // style: TextStyle(fontSize: 30),
-//                                       style: TextStyle(
-//                                         fontFamily: 'Poppins',
-//                                         //fontWeight: FontWeight.bold,
-//                                         fontSize: 18.0,
-//                                         color: Color(0XFF205DA2),
-//                                       ),
-//                                     ),
-//                                   ],
-//                  
-//                                   );
 //                                 },
 //                                 child: Container(
 //                                   width: 140.0,
